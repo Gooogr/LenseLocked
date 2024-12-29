@@ -10,3 +10,22 @@ func StaticHandler(tpl views.Template) http.HandlerFunc {
 		tpl.Execute(w, nil)
 	}
 }
+
+func FAQ(tpl views.Template) http.HandlerFunc {
+	questions := []struct {
+		Question string
+		Answer   string
+	}{
+		{
+			Question: "Question 1",
+			Answer:   "Answer 1",
+		},
+		{
+			Question: "Question 2",
+			Answer:   "Answer 2",
+		},
+	}
+	return func(w http.ResponseWriter, r *http.Request) {
+		tpl.Execute(w, questions)
+	}
+}
