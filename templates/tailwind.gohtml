@@ -7,6 +7,20 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
+<header class="bg-gradient-to-r from-green-400 to-blue-500 text-black">
+    <nav class="px-8 py-6 flex items-center">
+        <div class="text-4xl pr-8 font-serif">LensLocked</div>
+        <div class="flex-grow">
+            <a class="text-lg font-semibold pr-8"href="/">Home</a>
+            <a class="text-lg font-semibold pr-8"href="/contact">Conact</a>
+            <a class="text-lg font-semibold pr-8"href="/faq">FAQ</a>
+        </div>
+        <div>
+            <a class="pr-4" href="#">Sign in</a>
+            <a class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded" href="#">Sign up</a>
+        </div>
+    </nav>
+</header>
 {{end}}
 
 {{define "footer"}}
