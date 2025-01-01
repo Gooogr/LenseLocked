@@ -24,6 +24,14 @@ func FAQ(tpl views.Template) http.HandlerFunc {
 			Question: "Question 2",
 			Answer:   "Answer 2",
 		},
+		{
+			Question: "Question 3",
+			Answer:   "Answer 3",
+		},
+		{
+			Question: "Question 4",
+			Answer:   "Answer 4",
+		},
 	}
 	return func(w http.ResponseWriter, r *http.Request) {
 		tpl.Execute(w, questions)
