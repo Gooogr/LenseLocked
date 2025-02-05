@@ -5,6 +5,7 @@ import (
 )
 
 func StaticHandler(tpl Template) http.HandlerFunc {
+	// because of closure we keep access to tpl object in StaticHanlder level
 	return func(w http.ResponseWriter, r *http.Request) {
 		tpl.Execute(w, nil)
 	}
